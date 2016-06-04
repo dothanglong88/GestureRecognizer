@@ -113,25 +113,25 @@
     }
 }
 
-/*- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    return false;
-}*/
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+//    return false;
+//}
 
-/*- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    if ([gestureRecognizer isMemberOfClass:[UIPanGestureRecognizer class]] &&
-        [otherGestureRecognizer isMemberOfClass:[UISwipeGestureRecognizer class]]) {
-        return true;
-    } else {
-        return false;
-    }
-}*/
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+//    if ([gestureRecognizer isMemberOfClass:[UIPanGestureRecognizer class]] &&
+//        [otherGestureRecognizer isMemberOfClass:[UISwipeGestureRecognizer class]]) {
+//        return true;
+//    } else {
+//        return false;
+//    }
+//}
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     if ([gestureRecognizer isMemberOfClass:[UIPanGestureRecognizer class]] &&
         [otherGestureRecognizer isMemberOfClass:[UISwipeGestureRecognizer class]]) {
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
 }
 @end
